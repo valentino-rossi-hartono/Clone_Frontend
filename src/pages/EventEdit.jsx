@@ -4,7 +4,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 
 const API_BASE_BASE = 'http://localhost:8000/api'; 
 
-// --- DATA DUMMY (Hapus oleh Mahasiswa setelah API terhubung) ---
+// --- DATA DUMMY (Hapus setelah API terhubung) ---
 const mockEventData = {
     1: { id: 1, event_name: "Webinar: Pengenalan Laravel 11", location: "Online (Zoom)", quota: 150 },
     2: { id: 2, event_name: "Workshop React Hooks Lanjut", location: "Gedung FTIK, Ruang 201", quota: 35 },
@@ -25,7 +25,7 @@ const EventEdit = () => {
     // --- Langkah 1: Fetch Data Event (Simulasi GET) ---
     useEffect(() => {
         const fetchEventData = async () => {
-            // TODO: MAHASISWA MULAI KERJA DI SINI (1/2: Ganti logika fetch)
+            // TODO: MULAI MODIFIKASI DI SINI (1/2: Ganti logika fetch)
             
             // Hapus penundaan simulasi:
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -79,9 +79,8 @@ const EventEdit = () => {
         setError(null);
         setLoading(true); 
 
-        // TODO: MAHASISWA MULAI KERJA DI SINI (2/2: Ganti logika submit)
+        // TODO: MULAI MODIFIKASI DI SINI (2/2: Ganti logika submit)
 
-        // Hapus penundaan simulasi:
         await new Promise(resolve => setTimeout(resolve, 1000));
         
         try {
@@ -91,7 +90,7 @@ const EventEdit = () => {
             */
             
             // KODE MOCK:
-            console.log(`SIMULASI: Data Event ID ${id} diperbarui dengan`, formData);
+            console.log(`Data Event ID ${id} diperbarui dengan`, formData);
             alert(`Event ID ${id} berhasil diperbarui! (TO-DO: Hubungkan ke API POST/PUT)`);
             
             // TODO:SELESAI TO-DO DI SINI (2/2: Logika submit diganti)
